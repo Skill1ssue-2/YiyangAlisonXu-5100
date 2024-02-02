@@ -8,7 +8,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="cc" green="ff" red="cc" type="rgb"/>
+      <Color blue="ff" green="ff" red="ff" type="rgb"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -39,9 +39,9 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" pref="560" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="577" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -85,10 +85,6 @@
                                       <Component id="ageTextField" max="32767" attributes="0"/>
                                       <Component id="lastNameTextField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jButton1" alignment="0" pref="194" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                                          <Component id="titleLable" min="-2" pref="138" max="-2" attributes="0"/>
-                                      </Group>
                                   </Group>
                               </Group>
                               <Component id="photoLable" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -98,6 +94,10 @@
                           <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
                           <Component id="submitButton" min="-2" pref="78" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="titleLable" min="-2" pref="138" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="117" max="32767" attributes="0"/>
               </Group>
@@ -106,9 +106,9 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <EmptySpace pref="80" max="32767" attributes="0"/>
                   <Component id="titleLable" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="firstNameLable" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="firstNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -170,7 +170,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="submitButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="submit"/>
+            <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="submitButtonMouseClicked"/>
@@ -195,7 +195,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="upload image"/>
+            <Property name="text" type="java.lang.String" value="Upload Image"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
