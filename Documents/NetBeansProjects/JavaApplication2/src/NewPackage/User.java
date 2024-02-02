@@ -69,9 +69,5 @@ public class User {
         return this.photo;
     }
     
-    // Constructor
-//    public User(String name, int age) {
-//        this.name = name;
-//        this.age = age;
-//    }
+    
 }
