@@ -12,9 +12,9 @@ import javax.swing.*;
 
 public class User {
      // Attributes
-    private String firstName;
-    private String lastName;
-    public int age;
+    public String firstName;
+    public String lastName;
+    public String age;
     public String email;
     public String phoneNumber;
     public ImageIcon photo;
@@ -37,11 +37,11 @@ public class User {
     }
     
     
-    public int getAge(){
+    public String getAge(){
         return age;
     }
     
-    public void setAge(int age){
+    public void setAge(String age){
         this.age = age;
     }
     

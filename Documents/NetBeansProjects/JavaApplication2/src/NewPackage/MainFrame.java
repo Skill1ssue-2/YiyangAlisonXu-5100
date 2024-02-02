@@ -57,7 +57,7 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 204));
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(22, 20, 22));
         jPanel1.setForeground(new java.awt.Color(51, 51, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(300, 300));
 
@@ -74,6 +74,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         titleLable.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        titleLable.setForeground(new java.awt.Color(255, 204, 0));
         titleLable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLable.setText("User Details");
 
@@ -89,8 +90,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        firstNameLable.setForeground(new java.awt.Color(255, 255, 255));
         firstNameLable.setText("First Name");
 
+        ageLable.setForeground(new java.awt.Color(255, 255, 255));
         ageLable.setText("Your Age");
 
         jButton1.setText("upload image");
@@ -100,6 +103,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        emailLable.setForeground(new java.awt.Color(255, 255, 255));
         emailLable.setText("Email");
 
         emailTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -108,10 +112,13 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        phonenumberLable.setForeground(new java.awt.Color(255, 255, 255));
         phonenumberLable.setText("Phone Number");
 
+        photoLable.setForeground(new java.awt.Color(255, 255, 255));
         photoLable.setText("Photo");
 
+        lastNameLable.setForeground(new java.awt.Color(255, 255, 255));
         lastNameLable.setText("Last Name");
 
         lastNameTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -138,25 +145,27 @@ public class MainFrame extends javax.swing.JFrame {
                                     .addComponent(lastNameLable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(32, 32, 32)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton1)
                                     .addComponent(phonenumberTextField)
                                     .addComponent(emailTextField)
-                                    .addComponent(titleLable, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(firstNameTextField)
                                     .addComponent(ageTextField)
-                                    .addComponent(lastNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)))
+                                    .addComponent(lastNameTextField)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(14, 14, 14)
+                                        .addComponent(titleLable, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(photoLable)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
+                        .addGap(154, 154, 154)
                         .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(titleLable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstNameLable)
                     .addComponent(firstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -180,9 +189,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(photoLable)
                     .addComponent(jButton1))
-                .addGap(100, 100, 100)
+                .addGap(54, 54, 54)
                 .addComponent(submitButton)
-                .addGap(88, 88, 88))
+                .addGap(134, 134, 134))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -212,39 +221,124 @@ public class MainFrame extends javax.swing.JFrame {
     
     
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
-        User userObj = new User();
-        userObj.setFirstName(firstNameTextField.getText());
-        userObj.setLastName(lastNameTextField.getText());
-        //newObj.setAge(ageTextField.getText());
+//        // TODO add your handling code here:
+           userObj.setFirstName(firstNameTextField.getText());
+           userObj.setLastName(lastNameTextField.getText());
+////        //newObj.setAge(ageTextField.getText());
+////        int age = Integer.parseInt(ageTextField.getText());
+////        userObj.setAge(age);
+////        userObj.setEmail(emailTextField.getText());
+////        userObj.setPhoneNumber(phonenumberTextField.getText());
+//        
+//        
+//        // Validate input
+//        StringBuilder errors = new StringBuilder();
+//        try {
+//            int age = Integer.parseInt(ageTextField.getText());
+//            userObj.setAge(String.valueOf(age));
+//        } catch (NumberFormatException e) {
+//            errors.append("Please enter a valid number for age.\n");
+//        }
+//        
+//        String email = emailTextField.getText();
+//        if (!email.matches("^(.+)@(.+)$")) {
+//            errors.append("Please enter a valid email address.\n");
+//        } else {
+//            userObj.setEmail(email);
+//        }
+//        
+//        String phoneNumber = phonenumberTextField.getText();
+//        if (!phoneNumber.matches("^[0-9]{10}$")) {
+//            errors.append("Please enter a valid 10-digit phone number.\n");
+//        } else {
+//            userObj.setPhoneNumber(phoneNumber);
+//            
+//
+//        
+//        if (errors.length() > 0) {
+//        // If there were errors, display them and return
+//            JOptionPane.showMessageDialog(this, errors.toString(), "Input Errors", JOptionPane.ERROR_MESSAGE);
+//            return; 
+//        }
+//     
+//        // if no errors
+//        String userInfoHtml = "<html><body>";
+//        userInfoHtml += "First Name: " + userObj.getFirstName() + "<br/>";
+//        userInfoHtml += "Last Name: " + userObj.getLastName() + "<br/>";
+//        userInfoHtml += "Age: " + userObj.getAge() + "<br/>";
+//        userInfoHtml += "Email: " + userObj.getEmail() + "<br/>";
+//        userInfoHtml += "Phone Number: " + userObj.getPhoneNumber() + "<br/>";
+//        userInfoHtml += "</body></html>";
+//
+//    // create a jpanel to display the user info and photo
+//        JPanel panel = new JPanel(new BorderLayout(50, 50)); // padding between components
+//
+//    // Label for the user information
+//        JLabel infoLabel = new JLabel(userInfoHtml);
+//        panel.add(infoLabel, BorderLayout.CENTER);
+//        
+//        ImageIcon photo = userObj.getPhoto();
+//        if (photo != null) {
+//            JLabel photoLabel = new JLabel(photo);
+//            panel.add(photoLabel, BorderLayout.WEST);
+//    }
+//
+//        JOptionPane.showMessageDialog(this, panel, "User Profile", JOptionPane.PLAIN_MESSAGE);
+            
+//        
+//        
+//    }
+          StringBuilder errors = new StringBuilder();
+    try {
         int age = Integer.parseInt(ageTextField.getText());
-        userObj.setAge(age);
-        userObj.setEmail(emailTextField.getText());
-        userObj.setPhoneNumber(phonenumberTextField.getText());
-        
-        String userInfoHtml = "<html><body>";
-        userInfoHtml += "First Name: " + userObj.getFirstName() + "<br/>";
-        userInfoHtml += "Last Name: " + userObj.getLastName() + "<br/>";
-        userInfoHtml += "Age: " + userObj.getAge() + "<br/>";
-        userInfoHtml += "Email: " + userObj.getEmail() + "<br/>";
-        userInfoHtml += "Phone Number: " + userObj.getPhoneNumber() + "<br/>";
-        userInfoHtml += "</body></html>";
+        userObj.setAge(String.valueOf(age));
+    } catch (NumberFormatException e) {
+        errors.append("Please enter a valid number for age.\n");
+    }
+    
+    String email = emailTextField.getText();
+    if (!email.matches("^(.+)@(.+)$")) {
+        errors.append("Please enter a valid email address.\n");
+    } else {
+        userObj.setEmail(email);
+    }
+    
+    String phoneNumber = phonenumberTextField.getText();
+    if (!phoneNumber.matches("^[0-9]{10}$")) {
+        errors.append("Please enter a valid 10-digit phone number.\n");
+    } else {
+        userObj.setPhoneNumber(phoneNumber);
+    }
+    
+    if (errors.length() > 0) {
+        JOptionPane.showMessageDialog(this, errors.toString(), "Input Errors", JOptionPane.ERROR_MESSAGE);
+        return; 
+    }
+ 
+    // if no errors
+    String userInfoHtml = "<html><body>";
+    userInfoHtml += "First Name: " + userObj.getFirstName() + "<br/>";
+    userInfoHtml += "Last Name: " + userObj.getLastName() + "<br/>";
+    userInfoHtml += "Age: " + userObj.getAge() + "<br/>";
+    userInfoHtml += "Email: " + userObj.getEmail() + "<br/>";
+    userInfoHtml += "Phone Number: " + userObj.getPhoneNumber() + "<br/>";
+    userInfoHtml += "</body></html>";
 
-    // Create a panel to display the user info and photo
-        JPanel panel = new JPanel(new BorderLayout(10, 10)); // padding between components
+    // create a JPanel to display the user info and photo
+    JPanel panel = new JPanel(new BorderLayout(50, 50)); // padding between components
 
     // Label for the user information
-        JLabel infoLabel = new JLabel(userInfoHtml);
-        panel.add(infoLabel, BorderLayout.CENTER);
-        
-        ImageIcon photo = userObj.getPhoto();
-        if (photo != null) {
+    JLabel infoLabel = new JLabel(userInfoHtml);
+    panel.add(infoLabel, BorderLayout.CENTER);
+    
+    ImageIcon photo = userObj.getPhoto();
+    if (photo != null) {
         JLabel photoLabel = new JLabel(photo);
         panel.add(photoLabel, BorderLayout.WEST);
     }
 
-              
-        JOptionPane.showMessageDialog(this, panel, "User Profile", JOptionPane.INFORMATION_MESSAGE);
+    JOptionPane.showMessageDialog(this, panel, "User Profile", JOptionPane.PLAIN_MESSAGE);
+
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void submitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitButtonMouseClicked
@@ -266,9 +360,11 @@ public class MainFrame extends javax.swing.JFrame {
         JFileChooser file = new JFileChooser();
         if (file.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
             try {
+                 // Print file path
                 BufferedImage img = ImageIO.read(file.getSelectedFile());
                 Image edited_image = img.getScaledInstance(60, 80, Image.SCALE_SMOOTH);
                 if (edited_image != null) {
+                    
                     photoLable.setText(file.getSelectedFile().getAbsolutePath());
                     userObj.setPhoto(new ImageIcon(edited_image));
                 }
