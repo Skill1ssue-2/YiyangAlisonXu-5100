@@ -229,20 +229,15 @@ public class ViewPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         try{
             int selectedRowIndex = userTable.getSelectedRow();
-            if(selectedRowIndex < 0 ){
-
-                throw new IllegalArgumentException("Select any one user details to delete");
-
-            }
-            else{
+            
 
                 DefaultTableModel model = (DefaultTableModel) userTable.getModel();              
                 selectedUser = users.get(selectedRowIndex);
                 DatabaseConnector.deleteUser(selectedUser);
-                JOptionPane.showMessageDialog(null, "User Data Successfully Deleted","Successfully Deleted",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "User Data Deleted","Deleted",JOptionPane.INFORMATION_MESSAGE);
                 clearFields();
                 populateTable();
-            }
+            
 
         }
         catch (IllegalArgumentException e){
@@ -288,12 +283,12 @@ public class ViewPanel extends javax.swing.JPanel {
             
         }  
         catch (IllegalArgumentException e){
-            if ("not selected any user to edit".equals(e.getMessage().toLowerCase())){
-                JOptionPane.showMessageDialog(this, "Please Select any of the Users to Update","Data Updation Error",JOptionPane.ERROR_MESSAGE);
+            if ("No user to edit".equals(e.getMessage().toLowerCase())){
+                JOptionPane.showMessageDialog(this, "Select Users to Edit","EDIT Error",JOptionPane.ERROR_MESSAGE);
             }
             
             else{
-                JOptionPane.showMessageDialog(this, "Please change the existing data before saving the details","Data Updation Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Please update data before save.","EDIT Error",JOptionPane.ERROR_MESSAGE);
             }
             
    
@@ -305,23 +300,15 @@ public class ViewPanel extends javax.swing.JPanel {
         try{
             
             int selectedRowIndex = userTable.getSelectedRow();
-            if (selectedRowIndex<0){
-                throw new IllegalArgumentException("Select any one user to edit");
-            }
-            
-            else{
-                
-                
-                selectedUser = users.get(selectedRowIndex);
-                nameTextField.setText(selectedUser.getName());
-                ageTextField.setText(String.valueOf(selectedUser.getAge()));
-                
+               
+            selectedUser = users.get(selectedRowIndex);
+            nameTextField.setText(selectedUser.getName());
+            ageTextField.setText(String.valueOf(selectedUser.getAge()));
                 
             }
-        }
         
         catch(IllegalArgumentException e){
-            JOptionPane.showMessageDialog(this, e.getMessage(), "Selection Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, e.getMessage(), "EDIT Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_editButtonActionPerformed
 
